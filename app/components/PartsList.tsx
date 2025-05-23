@@ -9,12 +9,12 @@ const PartsList: React.FC<PartsListProps> = ({ parts }) => {
   const total = parts.reduce((sum, p) => sum + p.price, 0);
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow mt-6">
+    <div className="p-6 bg-white rounded-lg shadow mt-6 flex flex-col h-full">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">PC Parts</h3>
         <div className="text-lg font-semibold text-blue-600">${total.toLocaleString()}</div>
       </div>
-      <ul className="space-y-2">
+      <ul className="space-y-2 flex-grow">
         {parts.map((p) => (
           <li
             key={p.id}
@@ -31,8 +31,8 @@ const PartsList: React.FC<PartsListProps> = ({ parts }) => {
           </li>
         ))}
       </ul>
-      <div className="mt-4 flex justify-end">
-        <div className="bg-blue-50 p-3 rounded-lg flex items-center space-x-2">
+      <div className="mt-4 w-full">
+        <div className="bg-blue-50 p-3 rounded-lg flex items-center justify-between w-full">
           <span className="font-semibold text-gray-800">Total Cost</span>
           <span className="font-semibold text-blue-600">${total.toLocaleString()}</span>
         </div>
