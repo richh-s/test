@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       prev.includes(e) ? prev.filter(x => x !== e) : [...prev, e]
     );
 
-  const totalCost = parts.reduce((sum, p) => sum + p.price, 0);
+ 
 
   return (
     <div className="min-h-screen bg-blue-50 py-12 px-6 lg:px-20">
