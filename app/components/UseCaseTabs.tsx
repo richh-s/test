@@ -26,7 +26,7 @@ const UseCaseTabs: React.FC<UseCaseTabsProps> = ({ current, onChange }) => (
         key={key}
         onClick={() => onChange(key)}
         className={`flex-1 p-4 rounded-md border ${
-          key === current ? 'bg-blue-600 text-white' : 'bg-white text-gray-700'
+          key === current ? 'bg-blue-600 text-white' : 'bg-white text-gray-900'
         }`}
       >
         <div className="text-xl">{icon}</div>
