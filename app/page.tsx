@@ -9,6 +9,7 @@ import PartsList from '../app/components/PartsList';
 import { partsCatalog } from '../app/data/partsCatalog';
 import type { UseCase, Extra, Part } from '../app/types';
 
+
 const Home: NextPage = () => {
   const [budget, setBudget] = useState(1400);
   const [useCase, setUseCase] = useState<UseCase>('gaming');
@@ -40,14 +41,17 @@ const Home: NextPage = () => {
             <h3 className="text-lg font-medium mb-4">Use Case</h3>
             <UseCaseTabs current={useCase} onChange={setUseCase} />
           </div>
-          <ExtrasPanel extras={extras} onToggle={toggleExtra} />
+          <ExtrasPanel extras={extras} onToggle={toggleExtra} selectedRAM={'Auto'} onRAMChange={function (ram: 'Auto' | '16GB' | '32GB' | '64GB'): void {
+            throw new Error('Function not implemented.');
+          } } />
         </div>
 
         {/* Parts overview */}
-        <PartsList parts={parts} totalCost={totalCost} />
+        <PartsList parts={parts} />
       </div>
     </div>
   );
 };
 
 export default Home;
+
