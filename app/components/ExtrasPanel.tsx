@@ -53,7 +53,7 @@ const ExtrasPanel: React.FC<ExtrasPanelProps> = ({ extras, onToggle, selectedRAM
       {/* RAM Size Selection */}
       <div>
         <div className="font-semibold text-gray-800 mb-2">RAM Size</div>
-        <div className="flex space-x-2">
+        <div className="grid grid-cols-2 gap-2">
           {(['Auto', '16GB', '32GB', '64GB'] as RAMSize[]).map((ram) => (
             <button
               key={ram}
